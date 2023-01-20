@@ -1,5 +1,5 @@
 
-const Counter = ({title}, {ingredients}, {price}, {rating}, {onButtonClick}) => {
+const Counter = ({title, ingredients, price, rating, onButtonClick}) => {
 
     //add cake
     const handleAddCake = () => {
@@ -18,8 +18,8 @@ const Counter = ({title}, {ingredients}, {price}, {rating}, {onButtonClick}) => 
             <p>Ingredients: {ingredients}</p>
             <p>Price: {price}</p>
             <p>Rating: {rating}</p>
-            <button>Add</button>
-            <button>Remove</button>
+            <button onClick={handleAddCake}>Add</button>
+            <button onClick={handleRemoveCake}>Remove</button>
     </>
     )
 }
