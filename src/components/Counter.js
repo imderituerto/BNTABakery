@@ -1,14 +1,16 @@
 
-const Counter = ({title, ingredients, price, rating, onButtonClick}) => {
+const Counter = ({title, ingredients, price, rating, onButtonClick, count}) => {
 
     //add cake
     const handleAddCake = () => {
-        
+        onButtonClick(count + 1);
     }
 
     //remove cake
     const handleRemoveCake = () => {
-        
+        if (count > 0){
+            onButtonClick(count - 1);
+        }
     }
 
     //return counters
